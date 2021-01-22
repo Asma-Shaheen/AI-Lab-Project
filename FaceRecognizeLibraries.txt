@@ -1,1 +1,16 @@
---Libraries
+----Libraries for face recognition
+
+NumPy: Numpy stands for Numerical Python. NumPy is a Python library used for working with arrays. It also has functions for working in domain of linear algebra, 
+       fourier transform, and matrices.
+
+Cmake: CMake is used to control the software compilation process using simple platform and compiler independent configuration files, and generate native makefiles 
+       and workspaces that can be used in the compiler environment of your choice.
+
+dlib: DLib is an open source library implementing a variety of machine learning algorithms, including classification, regression, clustering, data transformation, 
+      and structured prediction.
+
+FaceRecognition: Recognize and manipulate faces from Python or from the command line with the world’s simplest face recognition library.Built using dlib’s 
+                 state-of-the-art face recognition.
+
+opencv-contrib-python: OpenCV (open source computer vision) is a very powerful library for image processing and machine learning tasks which also supports Tensorflow, 
+                       Torch/Pytorch and Caffe.
