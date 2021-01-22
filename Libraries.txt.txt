@@ -1,2 +1,59 @@
 Commit by Iman Muzaffar 
-Each line of the file is a data record. Each record consists of one or more fields, separated by commas. The use of the comma as a field separator is the source of the name for this file format.
+
+---DETAILS OF THE LIBARIRIES USED AS :-----
+
+OPEN CV:
+OpenCV is a huge open-source library for computer vision, machine learning, and image processing. 
+OpenCV supports a wide variety of programming languages like Python, C++, Java, etc. 
+It can process images and videos to identify objects, faces, or even the handwriting of a human.
+When it is integrated with various libraries, such as Numpy which is a highly optimized library for numerical operations, then the number of weapons increases in your Arsenal i.e whatever operations one can do in Numpy can be combined with OpenCV.
+
+This OpenCV tutorial will help you learn the Image-processing from Basics to Advance, like operations on Images, Videos using a huge set of Opencv-programs and projects.
+OpenCV-Python is a library of Python bindings designed to solve computer vision problems. cv2.imshow() method is used to display an image in a window. The window automatically fits to the image size.
+OpenCV-Python is a library of Python bindings designed to solve computer vision problems. cv2.imwrite() method is used to save an image to any storage device. This will save the image according to the specified format in current working directory.
+
+---INSTALLATION------
+To install these libraries, we need to run these pip commands in cmd:
+
+pip install opencv-python
+pip install numpy
+pip install matplotlib
+ To read the images cv2.imread() method is used. This method loads an image from the specified file. If the image cannot be read (because of missing file, improper
+ permissions, unsupported or invalid format) then this method returns an empty matrix.
+ 
+ OPENCV-CONTRIB-PYTHON 
+
+While installing from source will give you the greatest control over your OpenCV configuration, it’s also the hardest and the most time-consuming.
+
+If you’re looking for the fastest possible way to install OpenCV on your system, you want to use pip to install OpenCV (but there are a few things that may trip you up along the way, so make sure you read the rest of this guide).
+
+----------CUSTOM WHEEL---:
+
+If some dependency is not enabled in the pre-built wheels, you can also run the build locally to create a custom wheel.
+
+Clone this repository: git clone --recursive https://github.com/skvark/opencv-python.git
+cd opencv-python
+you can use git to checkout some other version of OpenCV in the opencv and opencv_contrib submodules if needed
+Add custom Cmake flags if needed, for example: export CMAKE_ARGS="-DSOME_FLAG=ON -DSOME_OTHER_FLAG=OFF" (in Windows you need to set environment variables differently depending on Command Line or PowerShell)
+Select the package flavor which you wish to build with ENABLE_CONTRIB and ENABLE_HEADLESS: i.e. export ENABLE_CONTRIB=1 if you wish to build opencv-contrib-python
+Run pip wheel . --verbose. NOTE: make sure you have the latest pip version, the pip wheel command replaces the old python setup.py bdist_wheel command which does not support pyproject.toml.
+this might take anything from 5 minutes to over 2 hours depending on your hardware
+You'll have the wheel file in the dist folder and you can do with that whatever you wish
+Optional: on Linux use some of the manylinux images as a build hosts if maximum portability is needed and run auditwheel for the wheel after build
+Optional: on macOS use delocate (same as auditwheel but for macOS) for better portability
+
+Source distributions
+Since OpenCV version 4.3.0, also source distributions are provided in PyPI. This means that if your system is not compatible with any of the wheels in PyPI, pip will attempt to build OpenCV from sources. If you need a OpenCV version which is not available in PyPI as a source distribution, please follow the manual build guidance above instead of this one.
+
+You can also force pip to build the wheels from the source distribution. Some examples:
+
+pip install --no-binary opencv-python opencv-python
+pip install --no-binary :all: opencv-python
+If you need contrib modules or headless version, just change the package name (step 4 in the previous section is not needed). However, any additional CMake flags can be provided via environment variables as described in step 3 of the manual build section. If none are provided, OpenCV's CMake scripts will attempt to find and enable any suitable dependencies. Headless distributions have hard coded CMake flags which disable all possible GUI dependencies.
+
+-------PIP INSTALLATION--------- 
+The two pip OpenCV packages: opencv-python and opencv-contrib-python
+Before we get started I want to remind you that the methods I’m coming here today are unofficial pre-built OpenCV packages that can be installed via pip — they are not official OpenCV packages released by OpenCV.org.
+
+Just because they are not official packages doesn’t mean you should feel uncomfortable using them, but it’s important for you to understand that they are not endorsed and supported directly by the official OpenCV.org team.
+ 
